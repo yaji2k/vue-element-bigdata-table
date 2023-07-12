@@ -24,6 +24,7 @@
         :store="store"
         :border="border"
         :default-sort="defaultSort"
+        :resizable="resizable"
         :style="{
           width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
         }">
@@ -279,6 +280,8 @@ export default {
     stripe: Boolean,
 
     border: Boolean,
+
+    resizable: Boolean,
 
     rowKey: [String, Function],
 

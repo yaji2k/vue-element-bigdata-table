@@ -149,6 +149,7 @@ export default {
       required: true
     },
     border: Boolean,
+    resizable: Boolean,
     defaultSort: {
       type: Object,
       default () {
@@ -447,7 +448,7 @@ export default {
         target = target.parentNode;
       }
 
-      if (!column || !column.resizable) return;
+      if (!column || !column.resizable || !this.resizable) return;
 
       if (!this.dragging && this.border) {
         let rect = target.getBoundingClientRect();
